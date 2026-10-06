@@ -1,0 +1,349 @@
+<https://w3id.org/spot/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/created> "2025-12-01" .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://schema.org/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://schema.org/name> "Design Computation, RWTH Aachen University" .
+_:genid2 <http://schema.org/url> "https://dc.rwth-aachen.de/" .
+_:genid1 <http://schema.org/name> "Anne Göbels" .
+_:genid1 <http://schema.org/url> "https://dc.rwth-aachen.de/anne-gobels/" .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid3 <http://schema.org/affiliation> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:genid4 <http://schema.org/name> "Design Computation, RWTH Aachen University" .
+_:genid4 <http://schema.org/url> "https://dc.rwth-aachen.de/" .
+_:genid3 <http://schema.org/name> "Oliver Schulz" .
+_:genid3 <http://schema.org/url> "https://dc.rwth-aachen.de/oliver-schulz/" .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/creator> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:genid5 <http://schema.org/affiliation> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+_:genid6 <http://schema.org/name> "Design Computation, RWTH Aachen University" .
+_:genid6 <http://schema.org/url> "https://dc.rwth-aachen.de/" .
+_:genid5 <http://schema.org/name> "Fabian Rolke" .
+_:genid5 <http://schema.org/url> "https://dc.rwth-aachen.de/fabian-rolke/" .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/spot/> <http://purl.org/dc/terms/title> "Space Types Ontology"@en .
+<https://w3id.org/spot/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "spot" .
+<https://w3id.org/spot/> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/spot#> .
+<https://w3id.org/spot/> <http://www.w3.org/2000/01/rdf-schema#comment> "Space Types Ontology (SPOT) for describing spaces, appearances, and their relationships,\r\n        in the context of the AECO domain"@en .
+<https://w3id.org/spot/> <http://www.w3.org/2000/01/rdf-schema#label> "SPOT Ontology"@en .
+<https://w3id.org/spot/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/affiliation
+<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/name
+<http://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/url
+<http://schema.org/url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/spot#appearsIn
+<https://w3id.org/spot#appearsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#appearsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Appearance> .
+<https://w3id.org/spot#appearsIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#appearsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an appearance to the space in which it appears"@en .
+<https://w3id.org/spot#appearsIn> <http://www.w3.org/2000/01/rdf-schema#label> "appears in"@en .
+# 
+# https://w3id.org/spot#hasAppearance
+<https://w3id.org/spot#hasAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasAppearance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#EntitySpace> .
+<https://w3id.org/spot#hasAppearance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Appearance> .
+<https://w3id.org/spot#hasAppearance> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Entity space to an appearance object"@en .
+<https://w3id.org/spot#hasAppearance> <http://www.w3.org/2000/01/rdf-schema#label> "has appearance"@en .
+# 
+# https://w3id.org/spot#hasAxis
+<https://w3id.org/spot#hasAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasAxis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasAxis> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Axis> .
+<https://w3id.org/spot#hasAxis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to an axis"@en .
+<https://w3id.org/spot#hasAxis> <http://www.w3.org/2000/01/rdf-schema#label> "has axis"@en .
+# 
+# https://w3id.org/spot#hasDirection
+<https://w3id.org/spot#hasDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/spot#Axis> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/spot#hasAxis> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/spot#AssetSpace> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/spot#DocumentSpace> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#hasDirection> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#hasDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the direction of an axis. Should only be used for axes of Asset or Document Spaces."@en .
+<https://w3id.org/spot#hasDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has direction"@en .
+# 
+# https://w3id.org/spot#hasSubspace
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/spot#hasSuperSpace> .
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to a space it contains"@en .
+<https://w3id.org/spot#hasSubspace> <http://www.w3.org/2000/01/rdf-schema#label> "has subspace"@en .
+# 
+# https://w3id.org/spot#hasSuperSpace
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/spot#hasAppearance> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/spot#appearsIn> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "\"Relates a space to its containing/parent/super space.\r\n    This property can be derived by the propert chain: spaceA <hasAppearance> AppearanceX <appearsIn> spaceB "@en .
+<https://w3id.org/spot#hasSuperSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has super space"@en .
+# 
+# https://w3id.org/spot#hasXAxis
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/spot#hasAxis> .
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Axis> .
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its X axis"@en .
+<https://w3id.org/spot#hasXAxis> <http://www.w3.org/2000/01/rdf-schema#label> "has X axis"@en .
+# 
+# https://w3id.org/spot#hasYAxis
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/spot#hasAxis> .
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Axis> .
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its Y axis"@en .
+<https://w3id.org/spot#hasYAxis> <http://www.w3.org/2000/01/rdf-schema#label> "has Y axis"@en .
+# 
+# https://w3id.org/spot#hasZAxis
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/spot#hasAxis> .
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Axis> .
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a space to its Z axis"@en .
+<https://w3id.org/spot#hasZAxis> <http://www.w3.org/2000/01/rdf-schema#label> "has Z axis"@en .
+# 
+# https://w3id.org/spot#isInverseDirectionOf
+<https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to inverse directions to each other, eg. Front - Rear." .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/Organization
+# 
+# http://schema.org/Person
+# 
+# https://w3id.org/spot#Appearance
+<https://w3id.org/spot#Appearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#Appearance> <http://www.w3.org/2000/01/rdf-schema#comment> "The appearance of an entity space in a reference space (Asset, Document or another Entity Space).\r\n    The appearance object serves as a container/reference to assign spatial relation definitions for the relationship\r\n    between the Entity Space instance and the space where it appears in."@en .
+<https://w3id.org/spot#Appearance> <http://www.w3.org/2000/01/rdf-schema#label> "Appearance"@en .
+# 
+# https://w3id.org/spot#AreaSpace
+<https://w3id.org/spot#AreaSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#AreaSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#EntitySpace> .
+<https://w3id.org/spot#AreaSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A two-dimensional space that can be used to represent resources like 2D drawings or maps "@en .
+<https://w3id.org/spot#AreaSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Area Space"@en .
+# 
+# https://w3id.org/spot#AssetAppearance
+<https://w3id.org/spot#AssetAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#AssetAppearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#Appearance> .
+<https://w3id.org/spot#AssetAppearance> <http://www.w3.org/2000/01/rdf-schema#comment> "The appearance of entity space in an asset space"@en .
+<https://w3id.org/spot#AssetAppearance> <http://www.w3.org/2000/01/rdf-schema#label> "Asset Appearance"@en .
+# 
+# https://w3id.org/spot#AssetSpace
+<https://w3id.org/spot#AssetSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#AssetSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#PhysicalSpace> .
+<https://w3id.org/spot#AssetSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "\"The Asset Space represents the actual, physical asset.\r\n        An instance of the Asset Space is the superordinate object for the spatial superimposition of Entity Space instances."@en .
+<https://w3id.org/spot#AssetSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Asset Space"@en .
+# 
+# https://w3id.org/spot#Axis
+<https://w3id.org/spot#Axis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#Axis> <http://www.w3.org/2000/01/rdf-schema#comment> "An axis of the local coordinate system of a space instance"@en .
+<https://w3id.org/spot#Axis> <http://www.w3.org/2000/01/rdf-schema#label> "Axis"@en .
+# 
+# https://w3id.org/spot#Direction
+<https://w3id.org/spot#Direction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#Direction> <http://www.w3.org/2000/01/rdf-schema#comment> "The defined direction of an axis (e.g., an X-Axis is pointing to the 'Front' of the asset,\r\n     or an Y-Axis is pointing to the 'Bottom' of a document / plan ).\r\n     Only Asset Space or Document Space Axis should get an Direction Definition."@en .
+<https://w3id.org/spot#Direction> <http://www.w3.org/2000/01/rdf-schema#label> "Direction"@en .
+# 
+# https://w3id.org/spot#DocumentAppearance
+<https://w3id.org/spot#DocumentAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#DocumentAppearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#Appearance> .
+<https://w3id.org/spot#DocumentAppearance> <http://www.w3.org/2000/01/rdf-schema#comment> "The appearance of an entity space in a document space"@en .
+<https://w3id.org/spot#DocumentAppearance> <http://www.w3.org/2000/01/rdf-schema#label> "Document Appearance"@en .
+# 
+# https://w3id.org/spot#DocumentSpace
+<https://w3id.org/spot#DocumentSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#DocumentSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#VirtualSpace> .
+<https://w3id.org/spot#DocumentSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Document Space represents the extent of a document or file that contains Entity Spaces.\r\n    A Document Space can represent different, disjointed Entity Spaces, such as a collection of sections and\r\n     details on a construction plan."@en .
+<https://w3id.org/spot#DocumentSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Document Space"@en .
+# 
+# https://w3id.org/spot#EntityAppearance
+<https://w3id.org/spot#EntityAppearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#EntityAppearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#Appearance> .
+<https://w3id.org/spot#EntityAppearance> <http://www.w3.org/2000/01/rdf-schema#comment> "The appearance of an entity space in another (parent/super) entity space"@en .
+<https://w3id.org/spot#EntityAppearance> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Appearance"@en .
+# 
+# https://w3id.org/spot#EntitySpace
+<https://w3id.org/spot#EntitySpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#EntitySpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#PhysicalSpace> .
+<https://w3id.org/spot#EntitySpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Entity Space is a coherent unit of information covered by a single resource, such as a 3D model,\r\n     a 2D drawing, or a picture, representing its actual dimensions referring to the Asset Space."@en .
+<https://w3id.org/spot#EntitySpace> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Space"@en .
+# 
+# https://w3id.org/spot#HorizontalAreaSpace
+<https://w3id.org/spot#HorizontalAreaSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#HorizontalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#AreaSpace> .
+<https://w3id.org/spot#HorizontalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Horizontal Area Space is a subtype of Area Space, that implies that the plane of the resource\r\n     is parallel to the horizontal plane of the asset space. Floorplans or maps are typical horizontal area spaces."@en .
+<https://w3id.org/spot#HorizontalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Horizontal Area Space"@en .
+# 
+# https://w3id.org/spot#LineSpace
+<https://w3id.org/spot#LineSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#LineSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#EntitySpace> .
+<https://w3id.org/spot#LineSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "A one-dimensional space that can be used to represent e.g., vertical height references such as water levels "@en .
+<https://w3id.org/spot#LineSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Line Space"@en .
+# 
+# https://w3id.org/spot#PhysicalSpace
+<https://w3id.org/spot#PhysicalSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#PhysicalSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#PhysicalSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Physical Space is the superclass for the global, asset and entity spaces,\r\n    which implies that these spaces are can be directly mapped in physical space, as opposite to virtual spaces.\r\n    It is an abstract class and should not be used directly."@en .
+<https://w3id.org/spot#PhysicalSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Space"@en .
+# 
+# https://w3id.org/spot#PointSpace
+<https://w3id.org/spot#PointSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#PointSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#EntitySpace> .
+<https://w3id.org/spot#PointSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Point Space can represent resources that only need one point of reference,\r\n    such as the camera position of a picture or the position of a sensor."@en .
+<https://w3id.org/spot#PointSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Point Space"@en .
+# 
+# https://w3id.org/spot#Space
+<https://w3id.org/spot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "The abstract superclass for all defined space types."@en .
+<https://w3id.org/spot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+# 
+# https://w3id.org/spot#VerticalAreaSpace
+<https://w3id.org/spot#VerticalAreaSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#VerticalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#AreaSpace> .
+<https://w3id.org/spot#VerticalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Vertical Area Space is a subtype of Area Space, that implies that the plane of the resource is\r\n     parallel to the vertical axis of the asset space. Section drawings are typical vertical area spaces."@en .
+<https://w3id.org/spot#VerticalAreaSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical Area Space"@en .
+# 
+# https://w3id.org/spot#VirtualSpace
+<https://w3id.org/spot#VirtualSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#VirtualSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#VirtualSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Virtual Space represent resource spaces, which cannot be directly mapped to the real physical space,\r\n     as their spatial arrangement is artificial. For example 2D plans with a collection of drawings\r\n     or a file containing multiple disjointed 3D models of the same asset.  It is an abstract class and should not be used directly."@en .
+<https://w3id.org/spot#VirtualSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual Space"@en .
+# 
+# https://w3id.org/spot#VolumeSpace
+<https://w3id.org/spot#VolumeSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/spot#VolumeSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/spot#EntitySpace> .
+<https://w3id.org/spot#VolumeSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "The Volume Space can represent three-dimensional resources, such as 3D models or point clouds."@en .
+<https://w3id.org/spot#VolumeSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Volume Space"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/spot#Bottom
+<https://w3id.org/spot#Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Bottom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Bottom> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Top> .
+<https://w3id.org/spot#Bottom> <http://www.w3.org/2000/01/rdf-schema#comment> "The bottom of an asset or document space"@en .
+<https://w3id.org/spot#Bottom> <http://www.w3.org/2000/01/rdf-schema#label> "Bottom"@en .
+# 
+# https://w3id.org/spot#Front
+<https://w3id.org/spot#Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Front> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Front> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Rear> .
+<https://w3id.org/spot#Front> <http://www.w3.org/2000/01/rdf-schema#comment> "The front of an asset or document space."@en .
+<https://w3id.org/spot#Front> <http://www.w3.org/2000/01/rdf-schema#label> "Front"@en .
+# 
+# https://w3id.org/spot#Left
+<https://w3id.org/spot#Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Left> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Right> .
+<https://w3id.org/spot#Left> <http://www.w3.org/2000/01/rdf-schema#comment> "The left of an asset or document space"@en .
+<https://w3id.org/spot#Left> <http://www.w3.org/2000/01/rdf-schema#label> "Left"@en .
+# 
+# https://w3id.org/spot#Rear
+<https://w3id.org/spot#Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Rear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Rear> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Front> .
+<https://w3id.org/spot#Rear> <http://www.w3.org/2000/01/rdf-schema#comment> "The rear of an asset or document space"@en .
+<https://w3id.org/spot#Rear> <http://www.w3.org/2000/01/rdf-schema#label> "Rear"@en .
+# 
+# https://w3id.org/spot#Right
+<https://w3id.org/spot#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Right> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Left> .
+<https://w3id.org/spot#Right> <http://www.w3.org/2000/01/rdf-schema#comment> "The right of an asset or document space"@en .
+<https://w3id.org/spot#Right> <http://www.w3.org/2000/01/rdf-schema#label> "Right"@en .
+# 
+# https://w3id.org/spot#Top
+<https://w3id.org/spot#Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/spot#Top> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/spot#Direction> .
+<https://w3id.org/spot#Top> <https://w3id.org/spot#isInverseDirectionOf> <https://w3id.org/spot#Bottom> .
+<https://w3id.org/spot#Top> <http://www.w3.org/2000/01/rdf-schema#comment> "The top of an asset or document space"@en .
+<https://w3id.org/spot#Top> <http://www.w3.org/2000/01/rdf-schema#label> "Top"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

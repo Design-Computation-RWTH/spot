@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Space Types Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/spot#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/spot#","name":"Space Types Ontology", "headline":"Space Types Ontology for describing spaces, appearances, and their relationships,", "datePublished":"01.12.2025", "version":"1.0.0", "license":"https://creativecommons.org/licenses/by/4.0", "author":[{"@type":"Person","name":"Anne Göbels","url":"https://dc.rwth-aachen.de/anne-gobels/"},{"@type":"Person","name":"Oliver Schulz","url":"https://dc.rwth-aachen.de/oliver-schulz/"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Space Types Ontology</h1>
+<h2>Release  01.12.2025</h2>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="https://w3id.org/spot#">https://w3id.org/spot#</a></dd>
+<dt>Revision:</dt>
+<dd>1.0.0</dd>
+<dt>Authors:</dt>
+<dd><a href="https://dc.rwth-aachen.de/anne-gobels/">Anne Göbels</a>,(<a href="https://dc.rwth-aachen.de/">Design Computation, RWTH Aachen</a>)</dd>
+<dd><a href="https://dc.rwth-aachen.de/oliver-schulz/">Oliver Schulz</a>,(<a href="https://dc.rwth-aachen.de/">Design Computation, RWTH Aachen</a>)</dd>
+<dd><a href="https://dc.rwth-aachen.de/fabian-rolke/">Fabian Rolke</a>,(<a href="https://dc.rwth-aachen.de/">Design Computation, RWTH Aachen</a>)</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/licenses/by/4.0" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0" rel="license" target="_blank">
+<img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png" style="border-width:0 ; height:20px; vertical-align:center;"
+ alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<dt>Cite as:</dt>
+<dd style="max-width:80%; font-size:0.9rem;  text-overflow:ellipsis; white-space:normal; display:block;" title="Göbels, A., Schulz, O., &amp; Rolke, F. (2025). Space Types Ontology (Version 1.0.0). https://w3id.org/spot">
+Göbels, A., Schulz, O., &amp; Rolke, F. (2025). Space Types Ontology (Version 1.0.0). https://w3id.org/spot <a href= "spot.bib" target="_blank">(see BibTeX entry)</a>
+</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Space Types Ontology (SPOT) is an OWL-based ontology for spatially representing and managing resources and data related to assets in the built environment. Built on the principle that all asset data carries an inherent spatial dimension, SPOT provides machine-readable expressions of spatial metadata and relationships, enabling querying and integration of heterogeneous data sources across an asset. Its modular design focuses on basic spatial types and simple relationships, allowing domain-specific extensions for more precise use cases. The SPOT Ontology is extended with the <a href="https://w3id.org/spot/am#" target="_blank" rel="noopener noreferrer">SPOT Axis Mapping Ontology </a>. </span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+  <p>TheSpace Types Ontology (SPOT)  provides a machine-readable, OWL-based representation of spatial metadata and relationships across an asset. It is built on the principle that all asset-related data carries an inherent spatial dimension. Even non-geometric data such as textual reports can be spatially contextualized through their references to specific components, zones, or areas. By establishing a common digital space for all asset data, SPOT enables the discovery of relationships between previously disconnected resources, supporting spatial querying and data integration.</p>
+  <p>SPOT follows a modular design, focusing on a minimal set of basic spatial types and relationships to enable broad applicability. It can be extended or combined with existing ontologies to support more precise, domain-specific use cases.</p>
+</span><div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>spot</b></td><td>&lt;https://w3id.org/spot></td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>default namespace</b></td><td>&lt;https://w3id.org/spot&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">SPOT Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+   </li>
+   <li>
+      <a href="#AreaSpace" title="https://w3id.org/spot#AreaSpace">Area Space</a>
+   </li>
+   <li>
+      <a href="#AssetAppearance" title="https://w3id.org/spot#AssetAppearance">Asset Appearance</a>
+   </li>
+   <li>
+      <a href="#AssetSpace" title="https://w3id.org/spot#AssetSpace">Asset Space</a>
+   </li>
+   <li>
+      <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+   </li>
+   <li>
+      <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+   </li>
+   <li>
+      <a href="#DocumentAppearance" title="https://w3id.org/spot#DocumentAppearance">Document Appearance</a>
+   </li>
+   <li>
+      <a href="#DocumentSpace" title="https://w3id.org/spot#DocumentSpace">Document Space</a>
+   </li>
+   <li>
+      <a href="#EntityAppearance" title="https://w3id.org/spot#EntityAppearance">Entity Appearance</a>
+   </li>
+   <li>
+      <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+   </li>
+   <li>
+      <a href="#HorizontalAreaSpace" title="https://w3id.org/spot#HorizontalAreaSpace">Horizontal Area Space</a>
+   </li>
+   <li>
+      <a href="#LineSpace" title="https://w3id.org/spot#LineSpace">Line Space</a>
+   </li>
+   <li>
+      <a href="#PhysicalSpace" title="https://w3id.org/spot#PhysicalSpace">Physical Space</a>
+   </li>
+   <li>
+      <a href="#PointSpace" title="https://w3id.org/spot#PointSpace">Point Space</a>
+   </li>
+   <li>
+      <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+   </li>
+   <li>
+      <a href="#VerticalAreaSpace" title="https://w3id.org/spot#VerticalAreaSpace">Vertical Area Space</a>
+   </li>
+   <li>
+      <a href="#VirtualSpace" title="https://w3id.org/spot#VirtualSpace">Virtual Space</a>
+   </li>
+   <li>
+      <a href="#VolumeSpace" title="https://w3id.org/spot#VolumeSpace">Volume Space</a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#appearsIn" title="https://w3id.org/spot#appearsIn">appears in</a>
+   </li>
+   <li>
+      <a href="#hasAppearance" title="https://w3id.org/spot#hasAppearance">has appearance</a>
+   </li>
+   <li>
+      <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+   </li>
+   <li>
+      <a href="#hasDirection" title="https://w3id.org/spot#hasDirection">has direction</a>
+   </li>
+   <li>
+      <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
+   </li>
+   <li>
+      <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+   </li>
+   <li>
+      <a href="#hasXAxis" title="https://w3id.org/spot#hasXAxis">has X axis</a>
+   </li>
+   <li>
+      <a href="#hasYAxis" title="https://w3id.org/spot#hasYAxis">has Y axis</a>
+   </li>
+   <li>
+      <a href="#hasZAxis" title="https://w3id.org/spot#hasZAxis">has Z axis</a>
+   </li>
+   <li>
+      <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">
+         <span>is inverse direction of</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#Bottom" title="https://w3id.org/spot#Bottom">Bottom</a>
+   </li>
+   <li>
+      <a href="#Front" title="https://w3id.org/spot#Front">Front</a>
+   </li>
+   <li>
+      <a href="#Left" title="https://w3id.org/spot#Left">Left</a>
+   </li>
+   <li>
+      <a href="#Rear" title="https://w3id.org/spot#Rear">Rear</a>
+   </li>
+   <li>
+      <a href="#Right" title="https://w3id.org/spot#Right">Right</a>
+   </li>
+   <li>
+      <a href="#Top" title="https://w3id.org/spot#Top">Top</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
+</div>
+
+
+<!--DESCRIPTION SECTION
+    <div id="description"><h2 id="desc" class="list">SPOT Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+-->
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for SPOT Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by SPOT Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+      </li>
+      <li>
+         <a href="#AreaSpace" title="https://w3id.org/spot#AreaSpace">Area Space</a>
+      </li>
+      <li>
+         <a href="#AssetAppearance" title="https://w3id.org/spot#AssetAppearance">Asset Appearance</a>
+      </li>
+      <li>
+         <a href="#AssetSpace" title="https://w3id.org/spot#AssetSpace">Asset Space</a>
+      </li>
+      <li>
+         <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+      </li>
+      <li>
+         <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+      </li>
+      <li>
+         <a href="#DocumentAppearance" title="https://w3id.org/spot#DocumentAppearance">Document Appearance</a>
+      </li>
+      <li>
+         <a href="#DocumentSpace" title="https://w3id.org/spot#DocumentSpace">Document Space</a>
+      </li>
+      <li>
+         <a href="#EntityAppearance" title="https://w3id.org/spot#EntityAppearance">Entity Appearance</a>
+      </li>
+      <li>
+         <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+      </li>
+      <li>
+         <a href="#HorizontalAreaSpace" title="https://w3id.org/spot#HorizontalAreaSpace">Horizontal Area Space</a>
+      </li>
+      <li>
+         <a href="#LineSpace" title="https://w3id.org/spot#LineSpace">Line Space</a>
+      </li>
+      <li>
+         <a href="#PhysicalSpace" title="https://w3id.org/spot#PhysicalSpace">Physical Space</a>
+      </li>
+      <li>
+         <a href="#PointSpace" title="https://w3id.org/spot#PointSpace">Point Space</a>
+      </li>
+      <li>
+         <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+      </li>
+      <li>
+         <a href="#VerticalAreaSpace" title="https://w3id.org/spot#VerticalAreaSpace">Vertical Area Space</a>
+      </li>
+      <li>
+         <a href="#VirtualSpace" title="https://w3id.org/spot#VirtualSpace">Virtual Space</a>
+      </li>
+      <li>
+         <a href="#VolumeSpace" title="https://w3id.org/spot#VolumeSpace">Volume Space</a>
+      </li>
+   </ul>
+   <div class="entity" id="Appearance">
+      <h3>Appearance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Appearance</p>
+      <div class="comment">
+         <span class="markdown">The appearance of an entity space in a reference space (Asset, Document or another Entity Space).
+    The appearance object serves as a container/reference to assign spatial relation definitions for the relationship
+    between the Entity Space instance and the space where it appears in.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AssetAppearance" title="https://w3id.org/spot#AssetAppearance">Asset Appearance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DocumentAppearance" title="https://w3id.org/spot#DocumentAppearance">Document Appearance</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EntityAppearance" title="https://w3id.org/spot#EntityAppearance">Entity Appearance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#appearsIn" title="https://w3id.org/spot#appearsIn">appears in</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasAppearance" title="https://w3id.org/spot#hasAppearance">has appearance</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AreaSpace">
+      <h3>Area Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#AreaSpace</p>
+      <div class="comment">
+         <span class="markdown">A two-dimensional space that can be used to represent resources like 2D drawings or maps </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#HorizontalAreaSpace" title="https://w3id.org/spot#HorizontalAreaSpace">Horizontal Area Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VerticalAreaSpace" title="https://w3id.org/spot#VerticalAreaSpace">Vertical Area Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AssetAppearance">
+      <h3>Asset Appearance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#AssetAppearance</p>
+      <div class="comment">
+         <span class="markdown">The appearance of entity space in an asset space</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AssetSpace">
+      <h3>Asset Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#AssetSpace</p>
+      <div class="comment">
+         <span class="markdown">"The Asset Space represents the actual, physical asset.
+        An instance of the Asset Space is the superordinate object for the spatial superimposition of Entity Space instances.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PhysicalSpace" title="https://w3id.org/spot#PhysicalSpace">Physical Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Axis">
+      <h3>Axis<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Axis</p>
+      <div class="comment">
+         <span class="markdown">An axis of the local coordinate system of a space instance</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasXAxis" title="https://w3id.org/spot#hasXAxis">has X axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasYAxis" title="https://w3id.org/spot#hasYAxis">has Y axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasZAxis" title="https://w3id.org/spot#hasZAxis">has Z axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Direction">
+      <h3>Direction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Direction</p>
+      <div class="comment">
+         <span class="markdown">The defined direction of an axis (e.g., an X-Axis is pointing to the 'Front' of the asset,
+     or an Y-Axis is pointing to the 'Bottom' of a document / plan ).
+     Only Asset Space or Document Space Axis should get an Direction Definition.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasDirection" title="https://w3id.org/spot#hasDirection">has direction</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Bottom" title="https://w3id.org/spot#Bottom">Bottom</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Front" title="https://w3id.org/spot#Front">Front</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Left" title="https://w3id.org/spot#Left">Left</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Rear" title="https://w3id.org/spot#Rear">Rear</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Right" title="https://w3id.org/spot#Right">Right</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Top" title="https://w3id.org/spot#Top">Top</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DocumentAppearance">
+      <h3>Document Appearance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#DocumentAppearance</p>
+      <div class="comment">
+         <span class="markdown">The appearance of an entity space in a document space</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DocumentSpace">
+      <h3>Document Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#DocumentSpace</p>
+      <div class="comment">
+         <span class="markdown">The Document Space represents the extent of a document or file that contains Entity Spaces.
+    A Document Space can represent different, disjointed Entity Spaces, such as a collection of sections and
+     details on a construction plan.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#VirtualSpace" title="https://w3id.org/spot#VirtualSpace">Virtual Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EntityAppearance">
+      <h3>Entity Appearance<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#EntityAppearance</p>
+      <div class="comment">
+         <span class="markdown">The appearance of an entity space in another (parent/super) entity space</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EntitySpace">
+      <h3>Entity Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#EntitySpace</p>
+      <div class="comment">
+         <span class="markdown">The Entity Space is a coherent unit of information covered by a single resource, such as a 3D model,
+     a 2D drawing, or a picture, representing its actual dimensions referring to the Asset Space.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PhysicalSpace" title="https://w3id.org/spot#PhysicalSpace">Physical Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AreaSpace" title="https://w3id.org/spot#AreaSpace">Area Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#LineSpace" title="https://w3id.org/spot#LineSpace">Line Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PointSpace" title="https://w3id.org/spot#PointSpace">Point Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VolumeSpace" title="https://w3id.org/spot#VolumeSpace">Volume Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasAppearance" title="https://w3id.org/spot#hasAppearance">has appearance</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HorizontalAreaSpace">
+      <h3>Horizontal Area Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#HorizontalAreaSpace</p>
+      <div class="comment">
+         <span class="markdown">The Horizontal Area Space is a subtype of Area Space, that implies that the plane of the resource
+     is parallel to the horizontal plane of the asset space. Floorplans or maps are typical horizontal area spaces.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AreaSpace" title="https://w3id.org/spot#AreaSpace">Area Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LineSpace">
+      <h3>Line Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#LineSpace</p>
+      <div class="comment">
+         <span class="markdown">A one-dimensional space that can be used to represent e.g., vertical height references such as water levels </span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PhysicalSpace">
+      <h3>Physical Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#PhysicalSpace</p>
+      <div class="comment">
+         <span class="markdown">The Physical Space is the superclass for the global, asset and entity spaces,
+    which implies that these spaces are can be directly mapped in physical space, as opposite to virtual spaces.
+    It is an abstract class and should not be used directly.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AssetSpace" title="https://w3id.org/spot#AssetSpace">Asset Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PointSpace">
+      <h3>Point Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#PointSpace</p>
+      <div class="comment">
+         <span class="markdown">The Point Space can represent resources that only need one point of reference,
+    such as the camera position of a picture or the position of a sensor.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Space">
+      <h3>Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Space</p>
+      <div class="comment">
+         <span class="markdown">The abstract superclass for all defined space types.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PhysicalSpace" title="https://w3id.org/spot#PhysicalSpace">Physical Space</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#VirtualSpace" title="https://w3id.org/spot#VirtualSpace">Virtual Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasXAxis" title="https://w3id.org/spot#hasXAxis">has X axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasYAxis" title="https://w3id.org/spot#hasYAxis">has Y axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasZAxis" title="https://w3id.org/spot#hasZAxis">has Z axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#appearsIn" title="https://w3id.org/spot#appearsIn">appears in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VerticalAreaSpace">
+      <h3>Vertical Area Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#VerticalAreaSpace</p>
+      <div class="comment">
+         <span class="markdown">The Vertical Area Space is a subtype of Area Space, that implies that the plane of the resource is
+     parallel to the vertical axis of the asset space. Section drawings are typical vertical area spaces.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#AreaSpace" title="https://w3id.org/spot#AreaSpace">Area Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VirtualSpace">
+      <h3>Virtual Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#VirtualSpace</p>
+      <div class="comment">
+         <span class="markdown">The Virtual Space represent resource spaces, which cannot be directly mapped to the real physical space,
+     as their spatial arrangement is artificial. For example 2D plans with a collection of drawings
+     or a file containing multiple disjointed 3D models of the same asset.  It is an abstract class and should not be used directly.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DocumentSpace" title="https://w3id.org/spot#DocumentSpace">Document Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VolumeSpace">
+      <h3>Volume Space<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#VolumeSpace</p>
+      <div class="comment">
+         <span class="markdown">The Volume Space can represent three-dimensional resources, such as 3D models or point clouds.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#appearsIn" title="https://w3id.org/spot#appearsIn">appears in</a>
+      </li>
+      <li>
+         <a href="#hasAppearance" title="https://w3id.org/spot#hasAppearance">has appearance</a>
+      </li>
+      <li>
+         <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+      </li>
+      <li>
+         <a href="#hasDirection" title="https://w3id.org/spot#hasDirection">has direction</a>
+      </li>
+      <li>
+         <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
+      </li>
+      <li>
+         <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+      </li>
+      <li>
+         <a href="#hasXAxis" title="https://w3id.org/spot#hasXAxis">has X axis</a>
+      </li>
+      <li>
+         <a href="#hasYAxis" title="https://w3id.org/spot#hasYAxis">has Y axis</a>
+      </li>
+      <li>
+         <a href="#hasZAxis" title="https://w3id.org/spot#hasZAxis">has Z axis</a>
+      </li>
+      <li>
+         <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">
+            <span>is inverse direction of</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="appearsIn">
+      <h3>appears in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#appearsIn</p>
+      <div class="comment">
+         <span class="markdown">Relates an appearance to the space in which it appears</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAppearance">
+      <h3>has appearance<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasAppearance</p>
+      <div class="comment">
+         <span class="markdown">Relates an Entity space to an appearance object</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EntitySpace" title="https://w3id.org/spot#EntitySpace">Entity Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Appearance" title="https://w3id.org/spot#Appearance">Appearance</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAxis">
+      <h3>has axis<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasAxis</p>
+      <div class="comment">
+         <span class="markdown">Relates a space to an axis</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasXAxis" title="https://w3id.org/spot#hasXAxis">has X axis</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasYAxis" title="https://w3id.org/spot#hasYAxis">has Y axis</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasZAxis" title="https://w3id.org/spot#hasZAxis">has Z axis</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDirection">
+      <h3>has direction<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasDirection</p>
+      <div class="comment">
+         <span class="markdown">Defines the direction of an axis. Should only be used for axes of Asset or Document Spaces.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+               <sup class="type-c" title="class">c</sup>
+               <span class="logic">and</span> (<span class="logic">inverse</span>
+               <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+               <sup class="type-op" title="object property">op</sup>
+               <span class="logic">some</span>
+               <a href="#AssetSpace" title="https://w3id.org/spot#AssetSpace">Asset Space</a>
+               <sup class="type-c" title="class">c</sup>
+               <span class="logic">or</span>
+               <a href="#DocumentSpace" title="https://w3id.org/spot#DocumentSpace">Document Space</a>
+               <sup class="type-c" title="class">c</sup>)</dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSubspace">
+      <h3>has subspace<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasSubspace</p>
+      <div class="comment">
+         <span class="markdown">Relates a space to a space it contains</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSuperSpace">
+      <h3>has super space<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasSuperSpace</p>
+      <div class="comment">
+         <span class="markdown">"Relates a space to its containing/parent/super space.
+    This property can be derived by the propert chain: spaceA &lt;hasAppearance&gt; AppearanceX &lt;appearsIn&gt; spaceB </span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-property chains</dt>
+            <dd>
+               <a href="#hasAppearance" title="https://w3id.org/spot#hasAppearance">has appearance</a>
+               <sup class="type-op" title="object property">op</sup>
+               <span class="logic">o</span>
+               <a href="#appearsIn" title="https://w3id.org/spot#appearsIn">appears in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasXAxis">
+      <h3>has X axis<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasXAxis</p>
+      <div class="comment">
+         <span class="markdown">Relates a space to its X axis</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasYAxis">
+      <h3>has Y axis<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasYAxis</p>
+      <div class="comment">
+         <span class="markdown">Relates a space to its Y axis</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasZAxis">
+      <h3>has Z axis<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#hasZAxis</p>
+      <div class="comment">
+         <span class="markdown">Relates a space to its Z axis</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Axis" title="https://w3id.org/spot#Axis">Axis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isInverseDirectionOf">
+      <h3>is inverse direction of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#isInverseDirectionOf</p>
+      <div class="comment">
+         <span class="markdown">Links to inverse directions to each other, eg. Front - Rear.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Bottom" title="https://w3id.org/spot#Bottom">Bottom</a>
+      </li>
+      <li>
+         <a href="#Front" title="https://w3id.org/spot#Front">Front</a>
+      </li>
+      <li>
+         <a href="#Left" title="https://w3id.org/spot#Left">Left</a>
+      </li>
+      <li>
+         <a href="#Rear" title="https://w3id.org/spot#Rear">Rear</a>
+      </li>
+      <li>
+         <a href="#Right" title="https://w3id.org/spot#Right">Right</a>
+      </li>
+      <li>
+         <a href="#Top" title="https://w3id.org/spot#Top">Top</a>
+      </li>
+   </ul>
+   <div class="entity" id="Bottom">
+      <h3>Bottom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Bottom</p>
+      <div class="comment">
+         <span class="markdown">The bottom of an asset or document space</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Top" title="https://w3id.org/spot#Top">Top</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Front">
+      <h3>Front<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Front</p>
+      <div class="comment">
+         <span class="markdown">The front of an asset or document space.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Rear" title="https://w3id.org/spot#Rear">Rear</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Left">
+      <h3>Left<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Left</p>
+      <div class="comment">
+         <span class="markdown">The left of an asset or document space</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Right" title="https://w3id.org/spot#Right">Right</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Rear">
+      <h3>Rear<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Rear</p>
+      <div class="comment">
+         <span class="markdown">The rear of an asset or document space</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Front" title="https://w3id.org/spot#Front">Front</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Right">
+      <h3>Right<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Right</p>
+      <div class="comment">
+         <span class="markdown">The right of an asset or document space</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Left" title="https://w3id.org/spot#Left">Left</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Top">
+      <h3>Top<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#Top</p>
+      <div class="comment">
+         <span class="markdown">The top of an asset or document space</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">is inverse direction of</a>
+            <sup class="type-op" title="object property">op</sup>
+            <a href="#Bottom" title="https://w3id.org/spot#Bottom">Bottom</a>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Göbels, A., Schulz, O., & Beetz, J. (2024). Towards a Common Digital Space: Proposing a Schema for Spatially Linking Heterogeneous Resources. Proceedings of the 41st International Conference of CIB W78. https://itc.scix.net/paper/w78-2024-13
+</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>The SPOT Ontology was developed during the SPP 100+ Spacelink and Spatio-B-RAG Project funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation), Germany – Project numbers 501812634 and 562882930. </p>
+<p>The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

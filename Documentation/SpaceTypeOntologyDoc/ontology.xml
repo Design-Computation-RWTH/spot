@@ -1,0 +1,621 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/spot/"
+     xml:base="https://w3id.org/spot/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:spot="https://w3id.org/spot#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/spot/">
+        <terms:created>2025-12-01</terms:created>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:creator rdf:nodeID="genid3"/>
+        <terms:creator rdf:nodeID="genid5"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Space Types Ontology</terms:title>
+        <vann:preferredNamespacePrefix>spot</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/spot#"/>
+        <rdfs:comment xml:lang="en">Space Types Ontology (SPOT) for describing spaces, appearances, and their relationships,
+        in the context of the AECO domain</rdfs:comment>
+        <rdfs:label xml:lang="en">SPOT Ontology</rdfs:label>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid2"/>
+        <schema:name>Anne Göbels</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/anne-gobels/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid4"/>
+        <schema:name>Oliver Schulz</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/oliver-schulz/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid5">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema:affiliation rdf:nodeID="genid6"/>
+        <schema:name>Fabian Rolke</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/fabian-rolke/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid4">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid6">
+        <rdf:type rdf:resource="http://schema.org/Organization"/>
+        <schema:name>Design Computation, RWTH Aachen University</schema:name>
+        <schema:url>https://dc.rwth-aachen.de/</schema:url>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
+    
+
+
+    <!-- http://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/name"/>
+    
+
+
+    <!-- http://schema.org/url -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/url"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/spot#appearsIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#appearsIn">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:comment xml:lang="en">Relates an appearance to the space in which it appears</rdfs:comment>
+        <rdfs:label xml:lang="en">appears in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasAppearance -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasAppearance">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#EntitySpace"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:comment xml:lang="en">Relates an Entity space to an appearance object</rdfs:comment>
+        <rdfs:label xml:lang="en">has appearance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasAxis">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:comment xml:lang="en">Relates a space to an axis</rdfs:comment>
+        <rdfs:label xml:lang="en">has axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasDirection -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasDirection">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/spot#Axis"/>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://w3id.org/spot#hasAxis"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/spot#AssetSpace"/>
+                                    <rdf:Description rdf:about="https://w3id.org/spot#DocumentSpace"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Direction"/>
+        <rdfs:comment xml:lang="en">Defines the direction of an axis. Should only be used for axes of Asset or Document Spaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">has direction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasSubspace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasSubspace">
+        <owl:inverseOf rdf:resource="https://w3id.org/spot#hasSuperSpace"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:comment xml:lang="en">Relates a space to a space it contains</rdfs:comment>
+        <rdfs:label xml:lang="en">has subspace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasSuperSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasSuperSpace">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Space"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/spot#hasAppearance"/>
+            <rdf:Description rdf:about="https://w3id.org/spot#appearsIn"/>
+        </owl:propertyChainAxiom>
+        <rdfs:comment xml:lang="en">&quot;Relates a space to its containing/parent/super space.
+    This property can be derived by the propert chain: spaceA &lt;hasAppearance&gt; AppearanceX &lt;appearsIn&gt; spaceB </rdfs:comment>
+        <rdfs:label xml:lang="en">has super space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasXAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasXAxis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spot#hasAxis"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:comment xml:lang="en">Relates a space to its X axis</rdfs:comment>
+        <rdfs:label xml:lang="en">has X axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasYAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasYAxis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spot#hasAxis"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:comment xml:lang="en">Relates a space to its Y axis</rdfs:comment>
+        <rdfs:label xml:lang="en">has Y axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#hasZAxis -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#hasZAxis">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/spot#hasAxis"/>
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Axis"/>
+        <rdfs:comment xml:lang="en">Relates a space to its Z axis</rdfs:comment>
+        <rdfs:label xml:lang="en">has Z axis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/spot#isInverseDirectionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#isInverseDirectionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Direction"/>
+        <rdfs:range rdf:resource="https://w3id.org/spot#Direction"/>
+        <rdfs:comment>Links to inverse directions to each other, eg. Front - Rear.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/Organization -->
+
+
+    <owl:Class rdf:about="http://schema.org/Organization"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- https://w3id.org/spot#Appearance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#Appearance">
+        <rdfs:comment xml:lang="en">The appearance of an entity space in a reference space (Asset, Document or another Entity Space).
+    The appearance object serves as a container/reference to assign spatial relation definitions for the relationship
+    between the Entity Space instance and the space where it appears in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Appearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#AreaSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#AreaSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#EntitySpace"/>
+        <rdfs:comment xml:lang="en">A two-dimensional space that can be used to represent resources like 2D drawings or maps </rdfs:comment>
+        <rdfs:label xml:lang="en">Area Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#AssetAppearance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#AssetAppearance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:comment xml:lang="en">The appearance of entity space in an asset space</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset Appearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#AssetSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#AssetSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#PhysicalSpace"/>
+        <rdfs:comment xml:lang="en">&quot;The Asset Space represents the actual, physical asset.
+        An instance of the Asset Space is the superordinate object for the spatial superimposition of Entity Space instances.</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#Axis -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#Axis">
+        <rdfs:comment xml:lang="en">An axis of the local coordinate system of a space instance</rdfs:comment>
+        <rdfs:label xml:lang="en">Axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#Direction -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#Direction">
+        <rdfs:comment xml:lang="en">The defined direction of an axis (e.g., an X-Axis is pointing to the &apos;Front&apos; of the asset,
+     or an Y-Axis is pointing to the &apos;Bottom&apos; of a document / plan ).
+     Only Asset Space or Document Space Axis should get an Direction Definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Direction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#DocumentAppearance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#DocumentAppearance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:comment xml:lang="en">The appearance of an entity space in a document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Document Appearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#DocumentSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#DocumentSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#VirtualSpace"/>
+        <rdfs:comment xml:lang="en">The Document Space represents the extent of a document or file that contains Entity Spaces.
+    A Document Space can represent different, disjointed Entity Spaces, such as a collection of sections and
+     details on a construction plan.</rdfs:comment>
+        <rdfs:label xml:lang="en">Document Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#EntityAppearance -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#EntityAppearance">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#Appearance"/>
+        <rdfs:comment xml:lang="en">The appearance of an entity space in another (parent/super) entity space</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Appearance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#EntitySpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#EntitySpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#PhysicalSpace"/>
+        <rdfs:comment xml:lang="en">The Entity Space is a coherent unit of information covered by a single resource, such as a 3D model,
+     a 2D drawing, or a picture, representing its actual dimensions referring to the Asset Space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#HorizontalAreaSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#HorizontalAreaSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#AreaSpace"/>
+        <rdfs:comment xml:lang="en">The Horizontal Area Space is a subtype of Area Space, that implies that the plane of the resource
+     is parallel to the horizontal plane of the asset space. Floorplans or maps are typical horizontal area spaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">Horizontal Area Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#LineSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#LineSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#EntitySpace"/>
+        <rdfs:comment xml:lang="en">A one-dimensional space that can be used to represent e.g., vertical height references such as water levels </rdfs:comment>
+        <rdfs:label xml:lang="en">Line Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#PhysicalSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#PhysicalSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:comment xml:lang="en">The Physical Space is the superclass for the global, asset and entity spaces,
+    which implies that these spaces are can be directly mapped in physical space, as opposite to virtual spaces.
+    It is an abstract class and should not be used directly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Physical Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#PointSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#PointSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#EntitySpace"/>
+        <rdfs:comment xml:lang="en">The Point Space can represent resources that only need one point of reference,
+    such as the camera position of a picture or the position of a sensor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#Space -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#Space">
+        <rdfs:comment xml:lang="en">The abstract superclass for all defined space types.</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#VerticalAreaSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#VerticalAreaSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#AreaSpace"/>
+        <rdfs:comment xml:lang="en">The Vertical Area Space is a subtype of Area Space, that implies that the plane of the resource is
+     parallel to the vertical axis of the asset space. Section drawings are typical vertical area spaces.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vertical Area Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#VirtualSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#VirtualSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:comment xml:lang="en">The Virtual Space represent resource spaces, which cannot be directly mapped to the real physical space,
+     as their spatial arrangement is artificial. For example 2D plans with a collection of drawings
+     or a file containing multiple disjointed 3D models of the same asset.  It is an abstract class and should not be used directly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Virtual Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/spot#VolumeSpace -->
+
+
+    <owl:Class rdf:about="https://w3id.org/spot#VolumeSpace">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/spot#EntitySpace"/>
+        <rdfs:comment xml:lang="en">The Volume Space can represent three-dimensional resources, such as 3D models or point clouds.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/spot#Bottom -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Bottom">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Top"/>
+        <rdfs:comment xml:lang="en">The bottom of an asset or document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Bottom</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot#Front -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Front">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Rear"/>
+        <rdfs:comment xml:lang="en">The front of an asset or document space.</rdfs:comment>
+        <rdfs:label xml:lang="en">Front</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot#Left -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Left">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Right"/>
+        <rdfs:comment xml:lang="en">The left of an asset or document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Left</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot#Rear -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Rear">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Front"/>
+        <rdfs:comment xml:lang="en">The rear of an asset or document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Rear</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot#Right -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Right">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Left"/>
+        <rdfs:comment xml:lang="en">The right of an asset or document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Right</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/spot#Top -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/spot#Top">
+        <rdf:type rdf:resource="https://w3id.org/spot#Direction"/>
+        <spot:isInverseDirectionOf rdf:resource="https://w3id.org/spot#Bottom"/>
+        <rdfs:comment xml:lang="en">The top of an asset or document space</rdfs:comment>
+        <rdfs:label xml:lang="en">Top</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

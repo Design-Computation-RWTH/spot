@@ -1,0 +1,676 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Anne Göbels"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/anne-gobels/"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/spot#hasAxis"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot#AssetSpace"
+    }, {
+      "@id" : "https://w3id.org/spot#DocumentSpace"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Oliver Schulz"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/oliver-schulz/"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://schema.org/Person" ],
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid6"
+  } ],
+  "http://schema.org/name" : [ {
+    "@value" : "Fabian Rolke"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/fabian-rolke/"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://schema.org/Organization" ],
+  "http://schema.org/name" : [ {
+    "@value" : "Design Computation, RWTH Aachen University"
+  } ],
+  "http://schema.org/url" : [ {
+    "@value" : "https://dc.rwth-aachen.de/"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot#Axis"
+    }, {
+      "@id" : "_:genid9"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://schema.org/affiliation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/url",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/spot#Appearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The appearance of an entity space in a reference space (Asset, Document or another Entity Space).\r\n    The appearance object serves as a container/reference to assign spatial relation definitions for the relationship\r\n    between the Entity Space instance and the space where it appears in."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Appearance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#AreaSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A two-dimensional space that can be used to represent resources like 2D drawings or maps "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Area Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#AssetAppearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The appearance of entity space in an asset space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Asset Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#AssetSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"The Asset Space represents the actual, physical asset.\r\n        An instance of the Asset Space is the superordinate object for the spatial superimposition of Entity Space instances."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Asset Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#PhysicalSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Axis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An axis of the local coordinate system of a space instance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Axis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Bottom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The bottom of an asset or document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Bottom"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Top"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Direction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The defined direction of an axis (e.g., an X-Axis is pointing to the 'Front' of the asset,\r\n     or an Y-Axis is pointing to the 'Bottom' of a document / plan ).\r\n     Only Asset Space or Document Space Axis should get an Direction Definition."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Direction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#DocumentAppearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The appearance of an entity space in a document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Document Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#DocumentSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Document Space represents the extent of a document or file that contains Entity Spaces.\r\n    A Document Space can represent different, disjointed Entity Spaces, such as a collection of sections and\r\n     details on a construction plan."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Document Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#VirtualSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#EntityAppearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The appearance of an entity space in another (parent/super) entity space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entity Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#EntitySpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Entity Space is a coherent unit of information covered by a single resource, such as a 3D model,\r\n     a 2D drawing, or a picture, representing its actual dimensions referring to the Asset Space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entity Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#PhysicalSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Front",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The front of an asset or document space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Front"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Rear"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#HorizontalAreaSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Horizontal Area Space is a subtype of Area Space, that implies that the plane of the resource\r\n     is parallel to the horizontal plane of the asset space. Floorplans or maps are typical horizontal area spaces."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Horizontal Area Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#AreaSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Left",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The left of an asset or document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Left"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Right"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#LineSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A one-dimensional space that can be used to represent e.g., vertical height references such as water levels "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Line Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#PhysicalSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Physical Space is the superclass for the global, asset and entity spaces,\r\n    which implies that these spaces are can be directly mapped in physical space, as opposite to virtual spaces.\r\n    It is an abstract class and should not be used directly."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Physical Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#PointSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Point Space can represent resources that only need one point of reference,\r\n    such as the camera position of a picture or the position of a sensor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Point Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Rear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The rear of an asset or document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rear"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Front"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Right",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The right of an asset or document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Right"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Left"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Space",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The abstract superclass for all defined space types."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Space"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#Top",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/spot#Direction" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The top of an asset or document space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Top"
+  } ],
+  "https://w3id.org/spot#isInverseDirectionOf" : [ {
+    "@id" : "https://w3id.org/spot#Bottom"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#VerticalAreaSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Vertical Area Space is a subtype of Area Space, that implies that the plane of the resource is\r\n     parallel to the vertical axis of the asset space. Section drawings are typical vertical area spaces."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vertical Area Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#AreaSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#VirtualSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Virtual Space represent resource spaces, which cannot be directly mapped to the real physical space,\r\n     as their spatial arrangement is artificial. For example 2D plans with a collection of drawings\r\n     or a file containing multiple disjointed 3D models of the same asset.  It is an abstract class and should not be used directly."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Virtual Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#VolumeSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Volume Space can represent three-dimensional resources, such as 3D models or point clouds."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Volume Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#appearsIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an appearance to the space in which it appears"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "appears in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasAppearance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an Entity space to an appearance object"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#EntitySpace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has appearance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Appearance"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a space to an axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasDirection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the direction of an axis. Should only be used for axes of Asset or Document Spaces."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has direction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Direction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasSubspace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a space to a space it contains"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has subspace"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/spot#hasSuperSpace"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasSuperSpace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\"Relates a space to its containing/parent/super space.\r\n    This property can be derived by the propert chain: spaceA <hasAppearance> AppearanceX <appearsIn> spaceB "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has super space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/spot#hasAppearance"
+    }, {
+      "@id" : "https://w3id.org/spot#appearsIn"
+    } ]
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasXAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a space to its X axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has X axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/spot#hasAxis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasYAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a space to its Y axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Y axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/spot#hasAxis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#hasZAxis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a space to its Z axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has Z axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Axis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/spot#hasAxis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot#isInverseDirectionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links to inverse directions to each other, eg. Front - Rear."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Direction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/spot#Direction"
+  } ]
+}, {
+  "@id" : "https://w3id.org/spot/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2025-12-01"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid5"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Space Types Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "spot"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@id" : "https://w3id.org/spot#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Space Types Ontology (SPOT) for describing spaces, appearances, and their relationships,\r\n        in the context of the AECO domain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SPOT Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0.0"
+  } ]
+} ]
