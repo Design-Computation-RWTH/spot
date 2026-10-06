@@ -1,0 +1,51 @@
+{
+  "title": "SPOT – Space Types Ontology",
+  "description": "<p>The Space Types Ontology (SPOT) is an OWL-based ontology for spatially representing and managing resources and data related to assets in the built environment. Built on the principle that all asset data carries an inherent spatial dimension, SPOT provides machine-readable expressions of spatial metadata and relationships, enabling querying and integration of heterogeneous data sources across an asset. Its modular design focuses on basic spatial types and simple relationships, allowing domain-specific extensions for more precise use cases.</p><p>Namespace: <code>https://w3id.org/spot#</code> (prefix <code>spot</code>). This record contains the ontology source file (Turtle) and the ontology documentation.</p>",
+  "upload_type": "dataset",
+  "version": "1.0.0",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Göbels, Anne",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    },
+    {
+      "name": "Schulz, Oliver",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    },
+    {
+      "name": "Rolke, Fabian",
+      "affiliation": "Design Computation, RWTH Aachen University"
+    }
+  ],
+  "keywords": [
+    "ontology",
+    "OWL",
+    "Linked Data",
+    "Linked Building Data",
+    "Semantic Web",
+    "spatial representation",
+    "built environment",
+    "AECO",
+    "SPOT"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://w3id.org/spot",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-softwaredocumentation"
+    },
+    {
+      "identifier": "https://github.com/Design-Computation-RWTH/spot-am",
+      "relation": "isRequiredBy",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "https://github.com/Design-Computation-RWTH/spot-sg",
+      "relation": "isRequiredBy",
+      "resource_type": "dataset"
+    }
+  ]
+}
