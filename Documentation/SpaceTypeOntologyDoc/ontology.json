@@ -637,6 +637,23 @@
     "@id" : "https://w3id.org/spot#Direction"
   } ]
 }, {
+  "@id" : "https://w3id.org/spot#represents",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/spot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "represents"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
+  } ]
+}, {
   "@id" : "https://w3id.org/spot/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/created" : [ {

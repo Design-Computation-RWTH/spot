@@ -177,6 +177,13 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Direction> .
 <https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/spot#Direction> .
 <https://w3id.org/spot#isInverseDirectionOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links to inverse directions to each other, eg. Front - Rear." .
+#
+# https://w3id.org/spot#represents
+<https://w3id.org/spot#represents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/spot#represents> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/spot#Space> .
+<https://w3id.org/spot#represents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<https://w3id.org/spot#represents> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary."@en .
+<https://w3id.org/spot#represents> <http://www.w3.org/2000/01/rdf-schema#label> "represents"@en .
 # 
 # 
 # 

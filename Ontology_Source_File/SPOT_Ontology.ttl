@@ -267,3 +267,9 @@ spot:isInverseDirectionOf a owl:ObjectProperty;
     rdfs:range spot:Direction;
     rdfs:comment "Links to inverse directions to each other, eg. Front - Rear.".
 
+spot:represents a owl:ObjectProperty ;
+    rdfs:label "represents"@en ;
+    rdfs:comment "Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary."@en ;
+    rdfs:domain spot:Space ;
+    rdfs:range rdfs:Resource .
+

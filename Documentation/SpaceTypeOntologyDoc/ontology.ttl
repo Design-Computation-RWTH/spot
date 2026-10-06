@@ -190,6 +190,14 @@ _:genid6 rdf:type <http://schema.org/Organization> ;
                                              rdfs:comment "Links to inverse directions to each other, eg. Front - Rear." .
 
 
+###  https://w3id.org/spot#represents
+<https://w3id.org/spot#represents> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <https://w3id.org/spot#Space> ;
+                                   rdfs:range rdfs:Resource ;
+                                   rdfs:comment "Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary."@en ;
+                                   rdfs:label "represents"@en .
+
+
 #################################################################
 #    Classes
 #################################################################

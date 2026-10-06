@@ -296,6 +296,18 @@
     
 
 
+    <!-- https://w3id.org/spot#represents -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/spot#represents">
+        <rdfs:domain rdf:resource="https://w3id.org/spot#Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment xml:lang="en">Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">represents</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

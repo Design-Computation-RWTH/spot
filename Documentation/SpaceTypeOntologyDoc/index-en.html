@@ -210,6 +210,9 @@ This ontology has the following classes and properties.</span>
          <span>is inverse direction of</span>
       </a>
    </li>
+   <li>
+      <a href="#represents" title="https://w3id.org/spot#represents">represents</a>
+   </li>
 </ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
       <a href="#Bottom" title="https://w3id.org/spot#Bottom">Bottom</a>
@@ -647,6 +650,7 @@ This section provides details for each class and property defined by SPOT Ontolo
             <sup class="type-op" title="object property">op</sup>, <a href="#hasAxis" title="https://w3id.org/spot#hasAxis">has axis</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubspace" title="https://w3id.org/spot#hasSubspace">has subspace</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSuperSpace" title="https://w3id.org/spot#hasSuperSpace">has super space</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#represents" title="https://w3id.org/spot#represents">represents</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -754,6 +758,9 @@ This section provides details for each class and property defined by SPOT Ontolo
          <a href="#isInverseDirectionOf" title="https://w3id.org/spot#isInverseDirectionOf">
             <span>is inverse direction of</span>
          </a>
+      </li>
+      <li>
+         <a href="#represents" title="https://w3id.org/spot#represents">represents</a>
       </li>
    </ul>
    <div class="entity" id="appearsIn">
@@ -1050,6 +1057,31 @@ This section provides details for each class and property defined by SPOT Ontolo
             <dt>has range</dt>
             <dd>
                <a href="#Direction" title="https://w3id.org/spot#Direction">Direction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="represents">
+      <h3>represents<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/spot#represents</p>
+      <div class="comment">
+         <span class="markdown">Relates a SPOT space to the resource it spatially describes (the referent). The space may describe the spatial extent or location of the referent wholly or in part. Several spaces may represent the same referent, either as alternative descriptions or as parts of a decomposition. No completeness is implied: a single space does not necessarily cover the entire referent. The range is intentionally open, so that the referent can originate from any vocabulary.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="https://w3id.org/spot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Resource" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Resource">Resource</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
